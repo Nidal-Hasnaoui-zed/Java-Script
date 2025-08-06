@@ -11,6 +11,8 @@ function addTask() {
 
         let span = document.createElement('span'); 
         span.innerHTML = '\u00d7'; 
-                
+        
+        task.value = '';
     }
+    
 }

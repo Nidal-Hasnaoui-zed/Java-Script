@@ -12,3 +12,9 @@ function addTask(){
         container.appendChild(newItem);
     }
 }
+
+container.addEventListener('click', function(event){
+    if(event.target.tagName === 'LI'){
+        event.target.classList.toggle('checked');
+    }
+})

@@ -1,17 +1,14 @@
-
+let task = document.getElementById('input-box') ;
+let container = document.getElementById('list-container'); 
 
 function addTask(){
-    let task = document.getElementById('input-box').value ;
-    let container = document.getElementById('list-container'); 
-
-    if(task.trim() === ''){
+    if(task.value.trim() === ''){
         alert('plz enter a task !')
         return
     }else{
         let newItem = document.createElement('li'); 
-        newItem.textContent = task  ; 
+        newItem.textContent = task.value ; 
 
         container.appendChild(newItem);
     }
-
 }

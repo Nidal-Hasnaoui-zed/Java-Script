@@ -2,5 +2,15 @@ let task = document.getElementById('input-box');
 let container = document.getElementById('list-container'); 
 
 function addTask() {
-    
+    if(task.value.trim() === ''){
+        alert('plz gives us a fuckinf task !');
+    }else {
+        let li = document.createElement('li'); 
+        li.textContent = task.value ; 
+        container.appendChild(li); 
+
+        let span = document.createElement('span'); 
+        span.innerHTML = '\u00d7'; 
+                
+    }
 }

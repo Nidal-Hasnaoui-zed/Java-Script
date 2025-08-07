@@ -39,3 +39,19 @@ function generatePassword(){
     }
     return pwd ;
 }
+
+copyIcon.addEventListener('click', function(){
+    if(passBox.value !='' || passBox.value.length < 10){
+        navigator.clipboard.writeText(passBox.value);
+        copyIcon.innerText = "check";
+
+
+        setTimeout(()=>{
+
+            copyIcon.innerHTML = "content_copy";
+
+        },3000);
+    }else{
+        alert('invlaid choie !'); 
+    }
+})

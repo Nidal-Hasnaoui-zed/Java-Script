@@ -1,6 +1,7 @@
 let password = document.getElementById('password'); 
 let strength = document.getElementById('strength'); 
 let message = document.getElementById('message');
+let btn = document.getElementById('submit'); 
 
 password.addEventListener('input', function(){
     let password_value = password.value ; 
@@ -20,4 +21,13 @@ password.addEventListener('input', function(){
 
     strength.textContent = strength_vlaue; 
     message.style.display = 'block';
+})
+
+btn.addEventListener('click', function(){
+    let password_type = password.getAttribute('type');
+    if(password_type === 'password'){
+        password.setAttribute('type','text')
+    }else{
+        password.setAttribute('type','password');
+    }
 })

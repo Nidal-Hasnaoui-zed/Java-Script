@@ -51,7 +51,6 @@ copyIcon.addEventListener('click', function(){
             copyIcon.innerHTML = "content_copy";
 
         },3000);
-    }else{
-        alert('invlaid choie !'); 
+        alert('password coppyed !')
     }
 })

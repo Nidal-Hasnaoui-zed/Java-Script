@@ -19,3 +19,21 @@ sliderValue.textContent = inputSlider.value ;
 inputSlider.addEventListener('input', function(){
     sliderValue.textContent = inputSlider; 
 })
+
+generateBtn.addEventListener('click', generatePassword);
+
+function generatePassword(){
+    let len = inputSlider.value ; 
+    let chars = ''; 
+    let pwd = ''; 
+
+    chars += lowercaseEl.checked ? lowercaseLetters :''; 
+    chars += uppercaseEl.checked ? uppercaseLetters : '';
+    chars += numberEl.checked ? numbers : ''; 
+    chars += symbolsEl.checked ? symbols : ''; 
+
+    for(let i= 0 ; i< len ; i++){
+       pwd += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return pwd ;
+}

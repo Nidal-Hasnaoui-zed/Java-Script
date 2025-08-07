@@ -17,10 +17,12 @@ let symbols = "!@#$%^&*()_+-=[]{}\\|;':\",./<>?";
 
 sliderValue.textContent = inputSlider.value ; 
 inputSlider.addEventListener('input', function(){
-    sliderValue.textContent = inputSlider; 
+    sliderValue.textContent = inputSlider.value; 
 })
 
-generateBtn.addEventListener('click', generatePassword);
+generateBtn.addEventListener('click', function(){
+    passBox.value = generatePassword(); 
+});
 
 function generatePassword(){
     let len = inputSlider.value ; 
